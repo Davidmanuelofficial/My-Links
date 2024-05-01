@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@David Manuel Official</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #121212; /* Darker shade for better contrast */
+            text-align: center; 
+            padding-top: 20px; 
+            color: white; 
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .animated-text {
+            font-size: 32px;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.8s ease-out;
+            margin: 0 5px;
+            display: inline-block;
+        }
+        .profile-image { 
+            width: 150px; 
+            height: auto; 
+            border-radius: 50%; /* Circular image */
+            margin-top: 20px;
+        }
+        button { 
+            background-color: #333333; /* Dark gray background */
+            color: white;
+            border: none; 
+            padding: 15px 30px; 
+            margin: 15px; 
+            font-size: 18px;
+            font-weight: 500;
+            display: inline-block; 
+            cursor: pointer; 
+            border-radius: 50px; /* Rounded buttons */
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        button:hover, button:focus {
+            background-color: #555555; /* Lighter gray on hover */
+            transform: translateY(-3px);
+        }
+        a {
+            text-decoration: none;
+            color: inherit; /* Inherit button's text color */
+            display: inline-block;
+        }
+        img.logo { 
+            width: 20px; 
+            height: 20px; 
+            margin-left: 10px; 
+            vertical-align: middle; 
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var words = ['@', 'David', 'manuel', '_official_'];
+            var i = 0;
+            var container = document.getElementById('animated-title');
+            words.forEach((word, index) => {
+                var span = document.createElement('span');
+                span.textContent = word + (index < words.length - 1 ? " " : "");
+                span.className = 'animated-text';
+                container.appendChild(span);
+            });
+
+            var spans = document.querySelectorAll('.animated-text');
+            spans.forEach((span, index) => {
+                setTimeout(() => {
+                    span.style.opacity = 1;
+                }, 500 * index);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="animated-title"></div>
+    <img src="https://i.ibb.co/52dLZKH/20231004-012659.jpg" alt="David Manuel" class="profile-image">
+    <button>
+        <a href="https://Instagram.com/davidmanuel_official_" target="_blank">
+            My Instagram Account<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="logo">
+        </a>
+    </button>
+    <button>
+        <a href="https://www.facebook.com/profile.php?id=100077710812641" target="_blank">
+            My Facebook Account<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="logo">
+        </a>
+    </button>
+    <button>
+        <a href="https://open.spotify.com/playlist/09dx0qETroWG5HZWraDATA?si=Otba1yYySzutNawBzF8qtA" target="_blank">
+            My Spotify Playlist<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" class="logo">
+        </a>
+    </button>
+</body>
+</html>
